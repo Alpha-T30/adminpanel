@@ -1,0 +1,65 @@
+.sidebar{
+    flex: 1;
+    
+ overflow:hidden;
+ 
+
+    
+ 
+
+    
+ 
+    .wrapper{
+      
+       padding: 15px;
+  
+
+        .sidebarmenue{
+            h3{
+                color:rgb(184, 184, 184) ; 
+                font-size: 15px;
+                font-weight: bold; 
+            }
+            ul{
+                
+               
+                width: 100%;
+                
+                padding: 5px;
+                
+
+                list-style: none;
+                li{
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                   font-size: 15px;
+                   font-weight: 400;
+                   width: 100%;
+                   padding: 5px;
+                   margin-top: 3px;
+                   border-radius: 10px;
+
+                    .icon{
+                        margin-right: 4px;
+                        font-size: 19px;
+                    }
+                     &.active{
+                        background-color: rgb(212, 212, 212);
+
+                     }
+                    &:hover{
+                        background-color: rgb(212, 212, 212);
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.link{
+    text-decoration: none;
+    color: inherit;
+}

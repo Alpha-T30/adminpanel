@@ -1,0 +1,86 @@
+.topbar {
+  height: 60px;
+  width: 100%;
+  position: fixed;
+  
+  z-index: 555;
+  background-color:rgba(58, 57, 57, 0.116); 
+  
+
+  .wrapper {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .left {
+      padding: 0 20px;
+      span {
+        font-size: 36px;
+        font-weight: 900;
+        color: rgb(12, 155, 202);
+      }
+    }
+    .right {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+     
+       margin-right: 20px;
+
+      .icons {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+
+        .icon1 {
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          margin-right: 7px;
+          span {
+            background-color: rgb(7, 136, 18);
+            border-radius: 50%;
+            width: 12px;
+            height: 12px;
+            display: flex;
+            align-items: center;
+
+            justify-content: center;
+            
+            font-size: 14px;
+            color: white;
+
+            position: absolute;
+            top: -2px;
+            left: 9px;
+            font-weight: bold;
+          }
+        }
+      }
+      .propic {
+          margin-left: 6px;
+          
+          border-radius: 50%;
+          border: 2px solid blue;
+          width: 44px;
+          height: 44px;
+          background-color:teal;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+        img {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}

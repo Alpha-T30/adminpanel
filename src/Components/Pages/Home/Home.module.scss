@@ -1,0 +1,15 @@
+.home{
+    flex:5 ; 
+    height: calc(100vh - 60px);
+    overflow-y: scroll;
+  
+
+    width: 100%;
+     .homeWidget{
+         display: flex;
+         margin: 20px;
+         padding: 20px;
+        
+         
+     }
+}

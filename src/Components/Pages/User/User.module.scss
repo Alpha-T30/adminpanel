@@ -1,0 +1,223 @@
+.user {
+  flex: 4;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+  .title {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+    h1 {
+      font-weight: bold;
+      color: lightcoral;
+    }
+    button {
+      font-weight: bold;
+      color: white;
+      border-radius: 6px;
+      cursor: pointer;
+      width: 100px;
+      height: 35px;
+      font-size: 20px;
+
+      background-color: teal;
+      border: none;
+    }
+  }
+  .userr {
+    margin-top: 20px;
+    flex: 7;
+    display: flex;
+    align-items: center;
+    height: 80%;
+    width: 100%;
+    justify-content: space-between;
+    .show {
+      margin-right: 20px;
+      width: 100%;
+      display: flex;
+      flex: 3;
+      height: 100%;
+      flex-direction: column;
+      border-radius: 10px;
+      -webkit-box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+      box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+
+      padding: 10px;
+      .top {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        padding: 10px;
+        img {
+          border-radius: 50%;
+          width: 40px;
+          height: 40px;
+          object-fit: cover;
+          margin-right: 30px;
+        }
+        .job {
+          display: flex;
+
+          flex-direction: column;
+          span {
+            color: rgb(163, 163, 163);
+            font-weight: 600;
+          }
+          .showname {
+            color: black;
+            font-weight: bold;
+          }
+        }
+      }
+
+      .middle {
+        display: flex;
+        flex-direction: column;
+        margin-top: 15px;
+        margin-bottom: 10px;
+        padding: 10px;
+        h3 {
+          color: lightgrey;
+        }
+        .account {
+          display: flex;
+          flex-direction: column;
+          padding: 10px;
+          margin-top: 8px;
+          span {
+            display: flex;
+            align-items: center;
+            font-weight: 600;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            .icon {
+              margin-right: 10px;
+            }
+          }
+        }
+      }
+      .bottom {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+
+        h3 {
+          color: lightgrey;
+        }
+        .contact {
+          display: flex;
+          flex-direction: column;
+          padding: 10px;
+
+          span {
+            display: flex;
+            align-items: center;
+            font-weight: 600;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            .icon {
+              margin-right: 10px;
+            }
+          }
+        }
+      }
+    }
+
+    .update {
+      height: 100%;
+      flex: 5;
+
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      border-radius: 10px;
+      padding: 10px;
+      -webkit-box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+      box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+      h2 {
+        font-size: 30px;
+        color: crimson;
+      }
+      form {
+        display: flex;
+        width: 100%;
+        height: 100%;
+
+        .upleft {
+          flex: 3;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-evenly;
+          .userUpdateItem {
+            display: flex;
+            flex-direction: column;
+            label {
+              margin-bottom: 10px;
+              font-weight: bold;
+            }
+            input {
+              border: none;
+              width: 250px;
+              height: 30px;
+              border-bottom: 1px solid gray;
+              font-size: 16px;
+              font-weight: 400;
+              &:focus{
+                  outline: none;
+              }
+            }
+          }
+        }
+
+        .upright {
+          display: flex;
+          flex-direction: column;
+    
+          padding: 10px;
+           
+          align-items: flex-end;
+          justify-content: space-between;
+          flex: 2.6;
+
+          .imgup {
+            display: flex;
+            align-items: center;
+          
+            img {
+                width: 100px;
+                height: 130px;
+                border-radius: 10px;
+                object-fit: cover;
+                margin-right: 20px;
+            }
+            .publish{
+                cursor: pointer;
+                font-size: 32px;
+            }
+          }
+
+          button {
+            background-color: darkblue;
+            border-radius: 6px;
+
+            font-weight: bold;
+            color: white;
+            font-size: 16px;
+            border: none;
+            width: 170px;
+            height: 30px;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
