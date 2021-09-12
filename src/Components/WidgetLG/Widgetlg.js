@@ -8,6 +8,8 @@ export default function Widgetlg() {
     <div className={Style.large}>
       <h2>Latest Transactions</h2>
       <table>
+      <tbody> 
+
         <tr className={Style.tableHeading} >
           <th>Customer</th>
           <th>Date</th>
@@ -52,7 +54,7 @@ export default function Widgetlg() {
             <img
               src="https://w0.peakpx.com/wallpaper/774/763/HD-wallpaper-neon-mask-man-man-city-color-light-mask-neon-night-smoke.jpg"
               alt=""
-            />
+              />
 
             <span>Name</span>
           </td>
@@ -79,6 +81,7 @@ export default function Widgetlg() {
             <Button type="Declined"></Button>
           </td>
         </tr>
+              </tbody>
       </table>
     </div>
   );

@@ -1,0 +1,46 @@
+.login{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("https://i.postimg.cc/8cnYLpfc/ddddd.jpg");
+    background-size: cover;
+    form{
+        width: 50%;
+        height: 60%;
+
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color:rgba(27, 168, 173, 0.239);
+        border-radius: 10px;
+        input{
+            border: 3px solid rgb(35, 146, 197);
+            outline: none;
+            padding-left: 10px;
+            width: 70%;
+            height: 40px;
+            font-weight: bold;
+            font-size: 20px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+
+        }
+        button{
+            cursor: pointer;
+            width: 30%;
+            height: 50px;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+            margin-top: 3rem;
+            font-weight: bold;
+            font-size: 20px;
+            color: rgb(0, 0, 0);
+            background-color: rgba(26, 212, 26, 0.822);
+        }
+    }
+}

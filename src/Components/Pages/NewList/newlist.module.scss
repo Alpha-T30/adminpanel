@@ -1,0 +1,88 @@
+.nproduct {
+  flex: 4;
+  padding: 20px;
+
+  h1 {
+  }
+  form {
+    display: flex;
+    flex-wrap: wrap;
+
+    padding: 8px;
+    .left {
+      display: flex;
+      flex-direction: column;
+      .item {
+        width: 400px;
+        height: 70px;
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+
+        input {
+          width: 300px;
+          height: 60px;
+
+          border-radius: 5px;
+          font-weight: 600;
+          font-size: 17px;
+          padding-left: 12px;
+          &:focus {
+            outline: none;
+          }
+        }
+        label {
+          font-weight: bold;
+          font-size: 19px;
+          padding-bottom: 7px;
+        }
+      }
+      button {
+        width: 320px;
+        height: 35px;
+        color: white;
+        font-weight: bold;
+        font-size: 15px;
+
+        background-color: darkblue;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        margin-top: 30px;
+         
+      }
+    }
+    .c {
+      height: 300px;
+      display: flex;
+      width: 400px;
+      flex-direction: column;
+      margin-top: 10px;
+      label {
+        font-weight: bold;
+        font-size: 20px;
+      }
+      select {
+        height: 100%;
+
+        option {
+          height: 20px;
+          margin: 10px 0;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+.active {
+  width: 310px;
+  border: 3px solid rgb(109, 109, 109);
+  height: 50px;
+  border-radius: 5px;
+  font-size: 17px;
+  font-weight: 600;
+  &:focus {
+    outline: none;
+  }
+}

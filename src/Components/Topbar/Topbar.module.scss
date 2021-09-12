@@ -2,10 +2,9 @@
   height: 60px;
   width: 100%;
   position: fixed;
-  
+
   z-index: 555;
-  background-color:rgba(58, 57, 57, 0.116); 
-  
+  background-color: white ; 
 
   .wrapper {
     height: 100%;
@@ -25,14 +24,15 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-     
-       margin-right: 20px;
+
+      margin-right: 20px;
+ 
+
 
       .icons {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        
 
         .icon1 {
           position: relative;
@@ -50,7 +50,7 @@
             align-items: center;
 
             justify-content: center;
-            
+
             font-size: 14px;
             color: white;
 
@@ -61,18 +61,51 @@
           }
         }
       }
-      .propic {
-          margin-left: 6px;
-          
-          border-radius: 50%;
-          border: 2px solid blue;
-          width: 44px;
-          height: 44px;
-          background-color:teal;
+      .logout {
+        display: flex;
+        flex-direction: column;
+       justify-content: space-evenly;
+        
+
+        background-color: rgba(189, 189, 189, 0.678);
+        
+        position: absolute;
+        right: 20px;
+        border-radius: 5px;
+        padding: 15px;
+
+        top: 60px;
+        button {
           cursor: pointer;
-          display: flex;
-          align-items: center;
-          justify-content: center;
+          border: none;
+          border-radius: 5px;
+           height: 40px;
+           width: 100px;
+           display: flex;
+           align-items: center; 
+           justify-content: center;
+           margin: 10px 0;
+           font-size: 16px;
+          
+          background-color: royalblue;
+          color: white;
+          font-weight: bold;
+        }
+      }
+      .propic {
+        margin-left: 6px;
+
+        border-radius: 50%;
+        border: 2px solid blue;
+        width: 44px;
+        height: 44px;
+        background-color: teal;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        flex-direction: column;
 
         img {
           width: 40px;

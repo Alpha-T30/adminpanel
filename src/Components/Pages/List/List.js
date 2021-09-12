@@ -1,10 +1,9 @@
-//TO DO 
-// while updating you have to delete the previous file form firebase to save some 
-// storage , so learn how to delete file form firebase 
-
+//TO DO
+// while updating you have to delete the previous file form firebase to save some
+// storage , so learn how to delete file form firebase
 
 import { Link, useLocation } from "react-router-dom";
-import "./product.css";
+import "./list.css";
 
 import { Publish } from "@material-ui/icons";
 import Chart from "../../Chart/Chart";
@@ -15,40 +14,40 @@ import { useState } from "react";
 import { uploadBytesResumable } from "firebase/storage";
 import { getDownloadURL } from "firebase/storage";
 import storage from "../../../firebase";
-import { movieUpdate } from "../../../Context_Api/movieContext/MovieApiCalls";
 import { useContext } from "react";
-import { MovieContext } from "../../../Context_Api/movieContext/MovieContaxt";
+import { listUpdate } from "../../../Context_Api/ListContext/ListApiCalls";
+import { ListContext } from '../../../Context_Api/ListContext/ListContext';
 
-export default function Product() {
-  const { dispatch } = useContext(MovieContext);
+export default function List() {
+  const { dispatch } = useContext(ListContext);
   const [uploaded, setUploaded] = useState(0);
 
   const location = useLocation();
-  const movie = location.movie;
+  const list = location.list;
   const formRef = useRef();
   const [update, setUpdate] = useState(null);
 
-  let mymovie = {};
+  let mylist = {};
 
   const handleForm = (e) => {
     e.preventDefault();
 
     for (let i = 0; i < formRef.current.length - 1; i++) {
       if (formRef.current[i].type === "file") {
-        mymovie[formRef.current[i].name] = formRef.current[i].files[0];
+        mylist[formRef.current[i].name] = formRef.current[i].files[0];
       } else {
-        mymovie[formRef.current[i].name] =
+        mylist[formRef.current[i].name] =
           formRef.current[i].value === ""
-            ? movie[formRef.current[i].name]
+            ? list[formRef.current[i].name]
             : formRef.current[i].value;
       }
     }
 
-    setUpdate({ ...mymovie, _id: movie._id });
+    setUpdate({ ...mylist, _id: list._id });
 
     upload([
       { file: formRef.current[4].files[0], label: "trailer" },
-      { file: formRef.current[5].files[0], label: "fullMovie" },
+      { file: formRef.current[5].files[0], label: "fullList" },
       { file: formRef.current[6].files[0], label: "featuredImg" },
     ]);
   };
@@ -96,14 +95,14 @@ export default function Product() {
   const handleCreate = (e) => {
     e.preventDefault();
 
-    movieUpdate(dispatch, update);
+    listUpdate(dispatch, update);
     setUploaded(0);
     formRef.current.reset();
   };
   return (
     <div className="product">
       <div className="productTitleContainer">
-        <h1 className="productTitle">Movie</h1>
+        <h1 className="productTitle">List</h1>
         <Link to="/newproduct">
           <button className="productAddButton">Create</button>
         </Link>
@@ -111,53 +110,45 @@ export default function Product() {
       <div className="productTop">
         <div className="productTopRight">
           <div className="productInfoTop">
-            <img src={movie?.featuredImg} alt="" className="productInfoImg" />
-            <span className="productName">{movie?.title}</span>
+            <span className="productName">Title: {list?.title}</span>
           </div>
           <div className="productInfoBottom">
             <div className="productInfoItem">
               <span className="productInfoKey">id:</span>
-              <span className="productInfoValue">{movie?._id}</span>
+              <span className="productInfoValue">{list?._id}</span>
             </div>
             <div className="productInfoItem">
               <span className="productInfoKey">Genre</span>
-              <span className="productInfoValue">{movie?.genre}</span>
+              <span className="productInfoValue">{list?.genre}</span>
             </div>
             <div className="productInfoItem">
-              <span className="productInfoKey">Year</span>
-              <span className="productInfoValue">{movie?.year}</span>
+              <span className="productInfoKey">Type</span>
+              <span className="productInfoValue">{list?.type}</span>
             </div>
-            <div className="productInfoItem">
-              <span className="productInfoKey">Limit</span>
-              <span className="productInfoValue">{movie?.limit}</span>
-            </div>
+            
           </div>
         </div>
       </div>
       <div className="productBottom">
         <form ref={formRef} className="productForm">
           <div className="productFormLeft">
-            <label>Movie Title</label>
-            <input name="title" type="text" placeholder={movie?.title} />
+            <label>List Title</label>
+            <input name="title" type="text" placeholder={list?.title} />
             <label>Year</label>
-            <input name="year" type="text" placeholder={movie?.year} />
+            <input name="year" type="text" placeholder={list?.year} />
             <label>Genre</label>
-            <input name="genre" type="text" placeholder={movie?.genre} />
+            <input name="genre" type="text" placeholder={list?.genre} />
             <label>Limit</label>
-            <input name="limit" type="text" placeholder={movie?.limit} />
+            <input name="limit" type="text" placeholder={list?.limit} />
             <label>Trailer</label>
-            <input name="trailer" type="file" placeholder={movie?.trailer} />
-            <label>Full Movie</label>
-            <input
-              name="fullMovie"
-              type="file"
-              placeholder={movie?.fullMovie}
-            />
+            <input name="trailer" type="file" placeholder={list?.trailer} />
+            <label>Full List</label>
+            <input name="fullList" type="file" placeholder={list?.fullList} />
           </div>
           <div className="productFormRight">
             <div className="productUpload">
               <img
-                src={movie?.featuredImg}
+                src={list?.featuredImg}
                 alt=""
                 className="productUploadImg"
               />

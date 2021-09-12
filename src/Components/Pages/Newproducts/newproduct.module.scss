@@ -1,11 +1,16 @@
 .nproduct {
   flex: 4;
   padding: 20px;
+ 
+  
   h1 {
   }
   form {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+  
+
+    
     padding: 8px;
     .item {
       width: 400px;
